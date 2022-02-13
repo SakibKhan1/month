@@ -18,6 +18,7 @@ int main()
     cout << "Enter month: ";
     cin >> m;
     if(m == 2){
+    //accounting for leap year
         if(y % 4 != 0){
             cout << "28 days";
         }else if((y % 100) != 0){
