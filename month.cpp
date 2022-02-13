@@ -17,20 +17,23 @@ int main()
     cin >> y;
     cout << "Enter month: ";
     cin >> m;
-    if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12){
-    //all months with 31 days
+    if(m == 2){
+        if(y % 4 != 0){
+            cout << "28 days";
+        }else if((y % 100) != 0){
+            cout << "29 days";
+        }else if((y % 400) != 0){
+            cout << "28 days";
+        }else{
+            cout << "29 days";
+        }
+    }
+    else if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12){
+    //these are all months with 31 days
         cout << "31 days" << endl;
     }else if(m == 4 || m == 6 || m == 9 || m == 11){
-    //all months with 30 days
         cout << "30 days" << endl;
-    }else if(m == 2 && y % 4 == 0 && y % 100 == 0 && y % 400 == 0){
-        cout << "29 days" << endl;
-    }else if(m == 2 && y % 4!= 0){
-        cout << "28 days" << endl;
-    }else if(m == 2 && y % 400 != 0){
-        cout << "28 days" << endl;
-    }else{
-        cout << "29 days" << endl;}
+    }
 
 
  return 0;
