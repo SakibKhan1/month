@@ -21,11 +21,14 @@ int main()
         cout << "31 days" << endl;
     }else if(m == 4 || m == 6 || m == 9 || m == 11){
         cout << "30 days" << endl;
-    }else if(m == 2 && y % 4 == 0 && y % 100 == 0 && y % 400 == 0){
+    }else if(m == 2 && y % 4 == 0){
         cout << "29 days" << endl;
-    }else if(m == 2){
+    }else if(m == 2 && y % 4!= 0){
         cout << "28 days" << endl;
-    }
+    }else if(m == 2 && y % 400 != 0){
+        cout << "28 days" << endl;
+    }else{
+        cout << "29 days" << endl;}
 
 
  return 0;
